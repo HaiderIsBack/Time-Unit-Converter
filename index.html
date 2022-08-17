@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/7b10c42ea6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Universal Unit Converter</title>
+</head>
+<body>
+  
+<div class="container">
+  <div class="primeSection">
+    <input type="number" id="primary">
+    <input type="text" id="primeUnit" list="unit" class="units" onkeydown="return false;" required="required" onclick="Clear('1')">
+  </div>
+  <datalist id="unit">
+    <option value="Hr">Hour</option>
+    <option value="Min">Minute</option>
+    <option value="Sec">Second</option>
+    <option value="M-Sec">Mili-Second</option>
+  </datalist>
+ <i class="fa-solid fa-arrow-down" onclick="swap()"></i>
+ <div class="primeSection">
+    <input type="number" id="secondary">
+    <input type="text" id="secUnit" list="unit" class="units" onkeydown="return false;" required="required" onclick="Clear('2')">
+  </div>
+  
+  <button class="convertBtn" onclick="Converter()">CONVERT</button>
+</div>
+
+</body>
+<script src="index.js"></script>
+</html>
